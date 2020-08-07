@@ -2,11 +2,10 @@ import sqlite3
 from config import database_name
 
 
-sql_database_create = """CREATE TABLE Players(
-id TEXT PRIMARY KEY,
-chat TEXT NOT NULL,
-role TEXT,
-CONSTRAINT check_role CHECK (role in ('Mafia', 'Don', 'Civilian', 'Sheriff')));"""
+sql_database_create = f"""CREATE TABLE Players(
+id TEXT,
+chat TEXT,
+CONSTRAINT pk PRIMARY KEY (id));"""
 
 
 if __name__ == '__main__':
